@@ -16,6 +16,7 @@ public class ProjectJava {
      */
     public static void main(String[] args) {
         System.out.println("Chłopaki , Michał to alkoholik ale nie mówcie mu");
+        System.out.println("OK");
     }
     
 }
