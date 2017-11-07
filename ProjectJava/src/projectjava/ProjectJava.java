@@ -11,6 +11,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
+import java.util.Scanner;
 
 /**
  *
@@ -28,7 +29,8 @@ public static void main(String[] args) {
             String sciezka = br.readLine();
             FileReader in = new FileReader(sciezka);
             System.out.println("Ilość linii: " + numberOfLines(in));
-          //  System.out.println("Liczba slów: " + numberOFWords(in));
+            FileReader in2 = new FileReader(sciezka);
+            System.out.println("Liczba slów: " + zliczanieSlow.numberOFWords(in2));
             in.close();
             br.close();
 
@@ -48,6 +50,8 @@ public static void main(String[] args) {
         }
         return count;
     }
+    
+
 
 }
 
