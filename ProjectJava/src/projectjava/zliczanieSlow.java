@@ -8,6 +8,7 @@ package projectjava;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.LineNumberReader;
+import java.util.Scanner;
 
 /**
  *
@@ -15,13 +16,15 @@ import java.io.LineNumberReader;
  */
 public class zliczanieSlow {
 
-    public static int numberOfWords(FileReader r) throws IOException {
-        LineNumberReader ln = new LineNumberReader(r);
-        int count = 0;
-        while (ln.readLine() != null) {
-            count++;
-        }
-        return count;
+    public static int numberOFWords(FileReader r) {
+    Scanner skaner = new Scanner(r);
+    int count = 0;
+    while (skaner.hasNext()) {
+        skaner.next();
+        count++;
     }
+    skaner.close();
+    return count;
+}
 
 }
